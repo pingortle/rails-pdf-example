@@ -6,4 +6,5 @@
 </p>
 
 <%= link_to 'Edit', edit_conversion_path(@conversion) %> |
+<%= link_to 'PDF', conversion_path(@conversion, format: :pdf) %> |
 <%= link_to 'Back', conversions_path %>

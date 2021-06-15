@@ -8,6 +8,10 @@ class ConversionsController < ApplicationController
 
   # GET /conversions/1 or /conversions/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.pdf { send_data pdf_data(@conversion.source_url), filename: "screenshot.pdf" }
+    end
   end
 
   # GET /conversions/new
@@ -65,5 +69,9 @@ class ConversionsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def conversion_params
       params.require(:conversion).permit(:source_url)
+    end
+
+    def pdf_data(url)
+      `bin/pdf "#{url}"`
     end
 end
