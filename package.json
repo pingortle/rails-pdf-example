@@ -4,6 +4,6 @@
     "vite-plugin-ruby": "^2.0.4"
   },
   "dependencies": {
-    "puppeteer": "^10.0.0"
+    "puppeteer": "13.7.0"
   }
 }
