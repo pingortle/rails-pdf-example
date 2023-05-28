@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "vite": "2.3.7",
-    "vite-plugin-ruby": "2.0.5"
+    "vite-plugin-ruby": "3.2.2"
   },
   "dependencies": {
     "puppeteer": "14.1.1"
